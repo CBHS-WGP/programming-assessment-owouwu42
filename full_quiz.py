@@ -11,7 +11,7 @@ def logo():
                                  ::::::::    :  ::::           :::::
                                 :::::::      :: ::::: ::  :::::::::::
                                 ::::::::::    ::::::::::   ::::::::::
-                                 ::::::::::: :::::::::::::::::::::::
+                                 ::::::::::: :::::::::::: ::::::::::
                                   :::::::::::::::::::::::::::::::::
                                    ::::::::::::::::::::::::::::::
                                     ::::::::  :  :::::  :: :::::
@@ -28,12 +28,11 @@ def logo():
                             
 ''')
     
-#set loading screen to false
-    
-loading=False
-    
-#define error message
-error=("Press ENTER to begin")
+#define beginning error message
+starterror=("Press ENTER to begin")
+import math
+print("please enter your name:")
+nameerror=("please enter your name")
     
 #spacing
 loop=0
@@ -62,15 +61,12 @@ start=input()
 
 #error message trigger upon failure to start
 while not start=="":
-    print(error)
+    print(starterror)
     start=input()   
     
-#loading trigger
-while start=="":
-    print("loading...")
-    loop=0
-    print("loading..")
-    loop=0
-    print("loading.")
-    loop=0
+name=input()
+while name.isnumeric() or name=="":
+    print(nameerror)
+    name=input()
 
+print("hello ", name)
