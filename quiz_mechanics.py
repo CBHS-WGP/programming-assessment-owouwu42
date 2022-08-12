@@ -1,26 +1,28 @@
-qa=0
+import math
 #question answers defined
-q1=3
-q2=1
-q3=4
-q4=4
-q5=2
+q1="3"
+q2="1"
+q3="4"
+q4="4"
+q5="2"
 
-qu=("")
+
 
 questionnum=1
 points=0
 answer_list=[1,2,3,4]
 
 def questions(): 
-    if questionnum==1:
-        qu=("which option contains the letter a?")
-        qa=q1
-        opt=("1. "
-             "2. "
-             "3. "
-             "4. ")
-    elif questionnum==2:
+    global qu
+    qu=("which option contains the letter a?")
+    global qa
+    qa=q1
+    global opt
+    opt=("1.c    "
+         "2.c    "
+         "3.a    "
+         "4.c    ")        
+    if questionnum==2:
         qu=("")
         qa=q2
         opt=("1. "
@@ -50,20 +52,25 @@ def questions():
              "4. ")
 
 
-#answer error message defined
-anserror=("please enter 1, 2, 3, or 4")
-win=("~~~~CORRECT~~~~         Points: ", (points))
-loss=('~~~~Wrong~~~~ Better luck next time!   The correct answer was: ', (qa), '   Points: ', (points))
+
+
 
 questions()
-while questionnum<=6:
+
+#answer error message defined
+anserror=("please enter 1, 2, 3, or 4")
+win=('~~~~CORRECT~~~~         Points: {}' .format(points))
+loss=("~~~~Wrong~~~~ Better luck next time!   Points: {}" .format(points))
+
+while questionnum<6:
     questions()
     print(qu)
+    print(opt)
     ans=input()
-    if ans==1 or 2 or 3 or 4:
+    if ans=="1" or ans=="2" or ans=="3" or ans=="4":
         if ans==qa:
+            points=points+1
             print(win)
-            points=pounts+1
             questionnum=questionnum+1
         else:
             print(loss)
@@ -71,3 +78,4 @@ while questionnum<=6:
     else:
         print(anserror)
         
+print("end")
