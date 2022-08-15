@@ -23,29 +23,29 @@ def questions():
          "3.a    "
          "4.c    ")        
     if questionnum==2:
-        qu=("")
+        qu=("which option is option 1?")
         qa=q2
         opt=("1. "
              "2. "
              "3. "
              "4. ")
     elif questionnum==3:
-        qu=("")
+        qu=("the answer is 4")
         qa=q3
         opt=("1. "
              "2. "
              "3. "
              "4. ")
     elif questionnum==4:
-        qu=("")
+        qu=("it's still 4")
         qa=q4
         opt=("1. "
              "2. "
              "3. "
              "4. ")
     elif questionnum==5:
-        qu=("")
-        qa=q4
+        qu=("it's two now")
+        qa=q5
         opt=("1. "
              "2. "
              "3. "
@@ -59,8 +59,8 @@ questions()
 
 #answer error message defined
 anserror=("please enter 1, 2, 3, or 4")
-win=('~~~~CORRECT~~~~         Points: {}' .format(points))
-loss=("~~~~Wrong~~~~ Better luck next time!   Points: {}" .format(points))
+win=('~~~~CORRECT~~~~         ')
+loss=("~~~~Wrong~~~~ Better luck next time!   ")
 
 while questionnum<6:
     questions()
@@ -70,10 +70,10 @@ while questionnum<6:
     if ans=="1" or ans=="2" or ans=="3" or ans=="4":
         if ans==qa:
             points=points+1
-            print(win)
+            print(win, 'Points: {}' .format(points))
             questionnum=questionnum+1
         else:
-            print(loss)
+            print(loss, 'Points: {}' .format(points))
             questionnum=questionnum+1
     else:
         print(anserror)
