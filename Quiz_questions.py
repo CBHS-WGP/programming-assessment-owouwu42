@@ -32,34 +32,22 @@ def questions_and_answers():
     if questionnum==2:
         question=("Who was the head developer, producer, writer, and designer of The Elder Scrolls V: Skyrim?")
         qa=q2
-        opt=("1. Todd Howard        "
-             "2. Jeremy Soule        "
-             "3. Emil Pagliarulo        "
-             "4. Kurt Kuhlmann")
+        opt=("1. Todd Howard        2. Jeremy Soule        3. Emil Pagliarulo        4. Kurt Kuhlmann")
     #checking which question the player is on and changing the question, answer, and answer options appropriately
     elif questionnum==3:
         question=("What year was Skyrim released?")
         qa=q3
-        opt=("1. 2013        "
-             "2. 2018        "
-             "3. 2016        "
-             "4. 2011")
+        opt=("1. 2013        2. 2018        3. 2016        4. 2011")
     #checking which question the player is on and changing the question, answer, and answer options appropriately
     elif questionnum==4:
         question=("What illicit drug are the Khajiit of Skyrim well-known for selling")
         qa=q4
-        opt=("1. Giant water        "
-             "2. Wabbajack        "
-             "3. Groundwater hit        "
-             "4. Skooma")
+        opt=("1. Giant water        2. Wabbajack        3. Groundwater hit        4. Skooma")
     #checking which question the player is on and changing the question, answer, and answer options appropriately 
     elif questionnum==5:
         question=("Who killed the high king and is almost to be excecuted in the 'unbound' intro before being interrupted by Aluin?")
         qa=q5
-        opt=("1. Legate Rikke        "
-             "2. Ulfric Stormcloak        "
-             "3. Galmar Stone-Fist        "
-             "4. Lydia Delphine")
+        opt=("1. Legate Rikke        2. Ulfric Stormcloak        3. Galmar Stone-Fist        4. Lydia Delphine")
 
 #checking the question number
 while questionnum<6:
