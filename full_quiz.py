@@ -149,8 +149,9 @@ while questionnum<6:
         #prompting the user to try a valid input
         print(anserror)
         
+logo()
 #end message
-print("                                                    GOOD JOB", name, "!!!!! you completed the quiz!")
+print("                                                    GOOD JOB", name,"!!!!! you completed the quiz!")
 print("                                                         your score was:   ", points,"/5")
 #quit
 quit=input()
